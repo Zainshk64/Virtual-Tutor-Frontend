@@ -77,9 +77,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <div className="relative user-dropdown">
             <AnimatedWrap preset="slideUp">
-              <button
-                className="flex items-center gap-3 px-6 py-3 rounded-xl bg-[var(--color-darked)] hover:bg-orange2/30 cursor-pointer border border-orange2/40 transition-all"
-              >
+              <button className="flex items-center gap-3 px-6 py-3 rounded-xl bg-[var(--color-darked)] hover:bg-orange2/30 cursor-pointer border border-orange2/40 transition-all">
                 Login
               </button>
             </AnimatedWrap>
@@ -163,7 +161,6 @@ function Navbar() {
           <AnimatedWrap preset="slideUp">
             <div className="lg:hidden overflow-hidden bg-[var(--color-darked)]/30 border-t border-[var(--color-orange2)]/20">
               <div className="px-4 py-6 space-y-2">
-                {/* Mobile Navigation Links */}
                 {navItems.map((item, index) => (
                   <AnimatedWrap preset="slideUp" key={index}>
                     <Link to={item.link} onClick={ScrollToTop}>
@@ -175,9 +172,13 @@ function Navbar() {
                     </Link>
                   </AnimatedWrap>
                 ))}
+                <AnimatedWrap preset="slideUp">
+                  <button className="flex items-center gap-3 px-6 py-3 rounded-xl bg-[var(--color-darked)] hover:bg-orange2/30 cursor-pointer border border-orange2/40 transition-all">
+                    Login
+                  </button>
+                </AnimatedWrap>
 
-                {/* Mobile Auth Section */}
-                <div className="pt-4 border-t border-[var(--color-orange2)]/20 space-y-3">
+                {/* <div className="pt-4 border-t border-[var(--color-orange2)]/20 space-y-3">
                   <div className="px-4 py-3 bg-[var(--color-darked)]/60 rounded-xl">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-orange)] to-[var(--color-orange2)] flex items-center justify-center text-[var(--color-textcolor)] font-bold text-lg">
@@ -199,7 +200,7 @@ function Navbar() {
                       </span>
                     </button>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </AnimatedWrap>
